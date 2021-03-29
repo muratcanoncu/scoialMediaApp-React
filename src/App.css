@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: black !important;
 }
+a:hover {
+  text-decoration: none !important;
+}
+/* NavBar */
+nav {
+  height: 80px;
+  width: 100%;
+  /* border-bottom: 1px solid black; */
+  padding: 0 35px;
+  background: tomato;
+  color: white;
+  box-shadow: 3px 3px 8px grey;
+  margin-bottom: 30px;
+}
+nav #navButtons {
+  width: 200px;
+  height: 40px;
+}
+#navButtons button {
+  border-radius: 15px !important;
+  font-weight: bolder;
+  font-size: 0.9rem !important;
+  border: none;
+  width: 95px;
+  height: 35px;
+  padding: 1px 3px;
+}
+#navButtons button:hover {
+  background: maroon;
+  color: white;
+  transition: 0.2s;
+}
+#loggedUser {
+  width: 260px;
+}
+#loggedUser button {
+  border-radius: 15px !important;
+  font-weight: bolder;
+  font-size: 0.9rem !important;
+  border: none;
+  width: 90px;
+  height: 35px;
+  padding: 1px 3px;
+}
+#loggedUser button:hover {
+  background: maroon;
+  color: white;
+  transition: 0.2s;
+}
+.loggedInButtons {
+  border-radius: 15px !important;
+  font-weight: bolder;
+  font-size: 0.9rem !important;
+  border: none;
+  width: 90px;
+  height: 35px;
+  padding: 1px 3px;
+}
+.loggedInButtons:hover {
+  background: maroon;
+  color: white;
+  transition: 0.2s;
+}
+/* PostInput */
+#postInput {
+  width: 700px;
+  height: 120px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: tomato;
+  border-radius: 5px;
+}
+#postInput input {
+  height: 30%;
+  width: 95%;
+  outline: none;
+  padding: 0 5px;
+  font-weight: bolder;
+}
+#postInput div {
+  width: 95%;
+}
+#postInput div button {
+  width: 110px;
+  height: 32px;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+}
+#postInput div button:hover {
+  background: maroon;
+  color: white;
+  transition: 0.2s;
+}
+/* PostItem */
+#postItem {
+  width: 700px;
+  height: auto;
+  border: 1px solid black;
+  margin: 30px auto;
+}
+/* userProfile */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#userProfile {
+  /* border: 1px solid gray; */
+  background: tomato;
+  border-radius: 10px;
+  margin: 100px auto;
+  width: 380px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  box-shadow: 4px 4px 5px grey;
+  font-weight: bolder;
+}
+#userProfile button {
+  width: 200px;
+  height: 35px;
+  font-weight: bolder;
+  border-radius: 15px;
+  border: none;
+}
+#userProfile button:hover {
+  background: maroon;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transition: 0.2s;
 }
