@@ -5,18 +5,18 @@ export const UserData = [
     follower: "32",
     following: "44",
     posts: [
-      { id: 1, content: "selam", like: 3 },
-      { id: 2, content: "hello", like: 7 },
-    ],
-  },
-  {
-    id: 2,
-    userName: "batikandurmus",
-    follower: "25",
-    following: "12",
-    posts: [
-      { id: 1, content: "selam", like: 3 },
-      { id: 2, content: "hello", like: 7 },
+      {
+        id: 1,
+        content:
+          "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
+        like: 3,
+      },
+      {
+        id: 2,
+        content:
+          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,",
+        like: 7,
+      },
     ],
   },
 ];

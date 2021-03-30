@@ -20,7 +20,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         loggedIn: true,
-        UserData: [...state.userData, { ...newUserAccount }],
+        userData: [...state.userData, newUserAccount],
         activeUser: newUserAccount,
         activeUserIndex: state.userData.length,
       };
@@ -40,6 +40,7 @@ const reducer = (state, action) => {
         alert("Please Enter a valid username or sign up!");
       }
     case "SIGN_OUT":
+      console.log(state.userData);
       return {
         ...state,
         loggedIn: false,
@@ -56,12 +57,38 @@ const reducer = (state, action) => {
       const updatedUserData = state.userData;
       updatedUserData[state.activeUserIndex].posts[postIndex].like =
         action.like + 1;
-      console.log(updatedUserData);
-      console.log(updatedUserData[state.activeUserIndex]);
       return {
         ...state,
         userData: updatedUserData,
         activeUser: updatedActiveUser,
+      };
+    case "NEW_POST":
+      const newPostUserData = state.userData;
+      const newPost = {
+        id: newPostUserData[state.activeUserIndex].posts.length + 1,
+        content: action.payload,
+        like: 0,
+      };
+      newPostUserData[state.activeUserIndex].posts.push(newPost);
+      console.log(
+        "postsBeforeRemove",
+        newPostUserData[state.activeUserIndex].posts
+      );
+      return {
+        ...state,
+      };
+    case "DELETE_POST":
+      const postsAfterDelete = state.userData[
+        state.activeUserIndex
+      ].posts.filter((post) => {
+        return post.id !== action.payload;
+      });
+      const newUserData = state.userData;
+      newUserData[state.activeUserIndex].posts = postsAfterDelete;
+      return {
+        ...state,
+        userData: newUserData,
+        activeUser: newUserData[state.activeUserIndex],
       };
   }
 };

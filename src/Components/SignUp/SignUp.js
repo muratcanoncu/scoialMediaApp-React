@@ -25,7 +25,7 @@ function SignUp() {
       <input
         type="text"
         value={signUpName}
-        className="px-1"
+        className="px-2 font-weight-bolder"
         style={{
           height: "36px",
           width: "70%",

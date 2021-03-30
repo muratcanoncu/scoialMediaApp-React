@@ -29,7 +29,7 @@ function Login() {
       ) : (
         <input
           type="text"
-          className="px-1"
+          className="px-2 font-weight-bolder"
           value={loginName}
           style={{
             height: "36px",

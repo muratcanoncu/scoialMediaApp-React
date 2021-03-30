@@ -31,11 +31,14 @@ function Navbar(props) {
           className="d-flex justify-content-end align-items-center"
         >
           <Link to="/profile" replace>
-            <p className="mb-0 mr-4 text-dark font-weight-bolder">
+            <p
+              id="toProfile"
+              className="mb-1 mr-4 text-dark font-weight-bolder"
+            >
               USER:{context.mainState.activeUser.userName}
             </p>
           </Link>
-          <Link to="/" replace>
+          <Link to="/login" replace>
             <button onClick={() => signOutHandler(context.myDispatch)}>
               Sign Out
             </button>

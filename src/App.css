@@ -72,10 +72,17 @@ nav #navButtons {
   color: white;
   transition: 0.2s;
 }
+#toProfile {
+  font-size: 1.3rem;
+}
+#toProfile:hover {
+  color: white !important;
+  transition: 0.2s;
+}
 /* PostInput */
 #postInput {
   width: 700px;
-  height: 120px;
+  height: 150px;
   margin: 0 auto;
   /* border: 1px solid black; */
   display: flex;
@@ -110,8 +117,10 @@ nav #navButtons {
 /* PostItem */
 #postItem {
   width: 700px;
-  height: auto;
-  border: 1px solid black;
+  height: 200px;
+  border: 1px solid tomato;
+  box-shadow: 8px 8px 14px tomato;
+  border-radius: 10px;
   margin: 30px auto;
 }
 /* userProfile */
@@ -129,6 +138,8 @@ nav #navButtons {
   justify-content: space-around;
   box-shadow: 4px 4px 5px grey;
   font-weight: bolder;
+  color: white;
+  text-shadow: 1px 1px 4px black;
 }
 #userProfile button {
   width: 200px;
@@ -141,4 +152,14 @@ nav #navButtons {
   background: maroon;
   color: white;
   transition: 0.2s;
+}
+
+#likeButton:hover {
+  font-size: 1.2rem;
+}
+#likeButton:active {
+  font-size: 1.3rem;
+}
+#deletePostButton {
+  box-shadow: 4px 5px 5px tomato;
 }
