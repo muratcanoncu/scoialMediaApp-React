@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/socialMediaApp-React/static/css/main.6cc17c9b.chunk.css",
+    "main.js": "/socialMediaApp-React/static/js/main.e076d83f.chunk.js",
+    "main.js.map": "/socialMediaApp-React/static/js/main.e076d83f.chunk.js.map",
+    "runtime-main.js": "/socialMediaApp-React/static/js/runtime-main.5de105da.js",
+    "runtime-main.js.map": "/socialMediaApp-React/static/js/runtime-main.5de105da.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/socialMediaApp-React/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.c59e24f9.chunk.js": "/socialMediaApp-React/static/js/2.c59e24f9.chunk.js",
+    "static/js/2.c59e24f9.chunk.js.map": "/socialMediaApp-React/static/js/2.c59e24f9.chunk.js.map",
+    "static/js/3.ff3e3902.chunk.js": "/socialMediaApp-React/static/js/3.ff3e3902.chunk.js",
+    "static/js/3.ff3e3902.chunk.js.map": "/socialMediaApp-React/static/js/3.ff3e3902.chunk.js.map",
+    "index.html": "/socialMediaApp-React/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/socialMediaApp-React/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.6cc17c9b.chunk.css.map": "/socialMediaApp-React/static/css/main.6cc17c9b.chunk.css.map",
+    "static/js/2.c59e24f9.chunk.js.LICENSE.txt": "/socialMediaApp-React/static/js/2.c59e24f9.chunk.js.LICENSE.txt",
+    "static/js/main.e076d83f.chunk.js.LICENSE.txt": "/socialMediaApp-React/static/js/main.e076d83f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5de105da.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.c59e24f9.chunk.js",
+    "static/css/main.6cc17c9b.chunk.css",
+    "static/js/main.e076d83f.chunk.js"
+  ]
+}
