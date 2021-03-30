@@ -17,7 +17,7 @@ function Navbar(props) {
             className="text-white"
             title="Home"
           >
-            SOCIAL.APP <i className="fas fa-frog"></i>
+            SOCIAL.FROG <i className="fas fa-frog"></i>
           </h1>
         </div>
       </Link>
