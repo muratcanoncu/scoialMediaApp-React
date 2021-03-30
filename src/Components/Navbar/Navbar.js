@@ -11,9 +11,15 @@ function Navbar(props) {
   return (
     <nav className="d-flex justify-content-between align-items-center pt-1">
       <Link to="/" replace>
-        <h1 className="text-white" title="Home">
-          SOCIAL.APP
-        </h1>
+        <div id="label">
+          <h1
+            style={{ fontFamily: "Yanone Kaffeesatz" }}
+            className="text-white"
+            title="Home"
+          >
+            SOCIAL.APP <i className="fas fa-frog"></i>
+          </h1>
+        </div>
       </Link>
       {/* add font style to header */}
       {!context.mainState.loggedIn ? (
@@ -34,6 +40,7 @@ function Navbar(props) {
             <p
               id="toProfile"
               className="mb-1 mr-4 text-dark font-weight-bolder"
+              title="To Profile"
             >
               USER:{context.mainState.activeUser.userName}
             </p>

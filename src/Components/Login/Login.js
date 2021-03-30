@@ -30,6 +30,8 @@ function Login() {
         <input
           type="text"
           className="px-2 font-weight-bolder"
+          minLength="1"
+          maxLength="20"
           value={loginName}
           style={{
             height: "36px",

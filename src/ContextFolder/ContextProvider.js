@@ -1,4 +1,4 @@
-import { useReducer, createContext } from "react";
+import { useReducer, createContext, useEffect } from "react";
 import { UserData } from "./UserData";
 const UserContext = createContext();
 const initialState = {
@@ -40,7 +40,6 @@ const reducer = (state, action) => {
         alert("Please Enter a valid username or sign up!");
       }
     case "SIGN_OUT":
-      console.log(state.userData);
       return {
         ...state,
         loggedIn: false,
@@ -50,8 +49,6 @@ const reducer = (state, action) => {
       const postIndex = state.activeUser.posts.findIndex((post) => {
         return post.id === action.payload;
       });
-      console.log(postIndex);
-      console.log(state.activeUser);
       const updatedActiveUser = state.activeUser;
       updatedActiveUser.posts[postIndex].like = action.like + 1;
       const updatedUserData = state.userData;
@@ -69,11 +66,7 @@ const reducer = (state, action) => {
         content: action.payload,
         like: 0,
       };
-      newPostUserData[state.activeUserIndex].posts.push(newPost);
-      console.log(
-        "postsBeforeRemove",
-        newPostUserData[state.activeUserIndex].posts
-      );
+      newPostUserData[state.activeUserIndex].posts.unshift(newPost);
       return {
         ...state,
       };
@@ -93,7 +86,16 @@ const reducer = (state, action) => {
   }
 };
 export function ContextProvider(props) {
-  const [socialMediaState, dispatch] = useReducer(reducer, initialState);
+  const [socialMediaState, dispatch] = useReducer(reducer, initialState, () => {
+    const localData = localStorage.getItem("socialMediaUserData");
+    return localData ? JSON.parse(localData) : initialState;
+  });
+  useEffect(() => {
+    localStorage.setItem(
+      "socialMediaUserData",
+      JSON.stringify(socialMediaState)
+    );
+  }, [socialMediaState]);
   return (
     <UserContext.Provider
       value={{ mainState: socialMediaState, myDispatch: dispatch }}
