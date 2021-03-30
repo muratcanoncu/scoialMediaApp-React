@@ -10,7 +10,7 @@ function UserProfile() {
         <h2 className="text-white">{context.mainState.activeUser.userName}</h2>
       </div>
 
-      <div className="d-flex justify-content-between align-items-center w-100 px-5">
+      <div className="d-flex justify-content-between align-items-center w-100 px-4">
         <h4>Follower: {context.mainState.activeUser.follower}</h4>
         <h4>Following: {context.mainState.activeUser.following}</h4>
       </div>

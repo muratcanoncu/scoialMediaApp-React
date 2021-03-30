@@ -6,7 +6,7 @@ function PostContainer() {
   const PostsList = context.mainState.activeUser.posts;
   if (context.mainState.loggedIn) {
     return (
-      <div>
+      <div className="mb-5 pb-5">
         {PostsList.map((post) => {
           return (
             <PostItem

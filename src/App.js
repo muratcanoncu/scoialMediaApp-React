@@ -10,6 +10,7 @@ import PostContainer from "./Components/PostList/PostContainer";
 import LoginPage from "./Components/Login/Login";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import SignUp from "./Components/SignUp/SignUp";
+import Footer from "./Components/Footer/Footer";
 function App() {
   // const context = useContext(UserContext);
   // console.log(context.mainState);
@@ -41,6 +42,7 @@ function App() {
             <PostContainer></PostContainer>
           </Route>
         </Switch>
+        <Footer></Footer>
       </div>
     </HashRouter>
   );
